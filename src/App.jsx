@@ -1,11 +1,25 @@
 import { useState } from 'react'
-import book from './img/book.png'
+
+import { Routes, Route } from 'react-router-dom';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import './App.css'
+import { useNavigate } from 'react-router-dom';
+import './App.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navigate = useNavigate();
+
+  const handleClick = (props) => {
+    // ボタンがクリックされたときに遷移
+    if (props == "BookDetail"){
+      navigate('/BookDetail');
+    }
+    else{
+      navigate('/');
+    }
+    
+  };
 
   return (
     <>
@@ -14,6 +28,8 @@ function App() {
         <img className='image' src={book}/>
          <div>
           <p className="title">title</p>
+          //<button className="button" onClick={() => handleClick('BookDetail')}>詳細</button>
+
           <p className='list-row'>この本にはこんなことがかいてあります</p>
         </div>
          <div className='cost'>
