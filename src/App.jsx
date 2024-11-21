@@ -1,16 +1,32 @@
 import { useState } from 'react'
 import book from './img/book.png'
+import { Routes, Route } from 'react-router-dom';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-// import './App.css'
+import { useNavigate } from 'react-router-dom';
+import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navigate = useNavigate();
+
+  const handleClick = (props) => {
+    // ボタンがクリックされたときに遷移
+    if (props == "BookDetail"){
+      navigate('/BookDetail');
+    }
+    else if (props == "top"){
+      navigate('/');
+    }
+    else{
+      navigate('/');
+    }
+    
+  };
 
   return (
     <>
       <div>
-        <div className="book-area">
+        <div className="book-area" onClick={() => handleClick('BookDetail')}>
         <img className='image' src={book}/>
          <div>
           <p className="title">title</p>
@@ -23,11 +39,9 @@ function App() {
       </div>    
         <div className='sp-fixed-menu'>
           <ul>
-            <li><a href='#'>トップ</a></li>
-            <li><a href='#'>マイページ</a></li>
+            <li><a href='#'onClick={() => handleClick('Top')}>トップ</a></li>
+            <li><a href='#'onClick={() => handleClick()}>マイページ</a></li>
           </ul> 
-                 
-
         </div>
       
     </>
