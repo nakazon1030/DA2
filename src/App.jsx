@@ -8,9 +8,15 @@ import './App.css'
 function App() {
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleClick = (props) => {
     // ボタンがクリックされたときに遷移
-    navigate('/x');
+    if (props == "BookDetail"){
+      navigate('/BookDetail');
+    }
+    else{
+      navigate('/');
+    }
+    
   };
 
   return (
@@ -20,7 +26,7 @@ function App() {
         <div className="book-area">
           <p className="title">title</p>
           <p>\1000</p>
-          <button className="button" onClick={handleClick}>詳細</button>
+          <button className="button" onClick={() => handleClick('BookDetail')}>詳細</button>
         </div>
       </div>
     </>
