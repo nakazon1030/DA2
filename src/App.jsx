@@ -2,9 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useNavigate } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+
+  // const navigate = useNavigate();
+
+  // const handleNavigate = () => {
+  //   navigate('/BookDetails'); // サブページへ遷移
+  // };
 
   return (
     <>
@@ -13,7 +19,7 @@ function App() {
         <div className="book-area">
           <p className="title">title</p>
           <p>\1000</p>
-          <button className="button">詳細</button>
+          {/* <button className="button" onClick={handleNavigate}>詳細</button> */}
         </div>
       </div>
     </>
