@@ -1,11 +1,10 @@
 import { useState } from 'react'
-
+import book from './img/book.png'
 import { Routes, Route } from 'react-router-dom';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
-
 
 function App() {
   const navigate = useNavigate();
@@ -14,6 +13,9 @@ function App() {
     // ボタンがクリックされたときに遷移
     if (props == "BookDetail"){
       navigate('/BookDetail');
+    }
+    else if (props == "top"){
+      navigate('/');
     }
     else{
       navigate('/');
@@ -24,12 +26,10 @@ function App() {
   return (
     <>
       <div>
-        <div className="book-area">
+        <div className="book-area" onClick={() => handleClick('BookDetail')}>
         <img className='image' src={book}/>
          <div>
           <p className="title">title</p>
-          //<button className="button" onClick={() => handleClick('BookDetail')}>詳細</button>
-
           <p className='list-row'>この本にはこんなことがかいてあります</p>
         </div>
          <div className='cost'>
@@ -39,11 +39,9 @@ function App() {
       </div>    
         <div className='sp-fixed-menu'>
           <ul>
-            <li><a href='#'>トップ</a></li>
-            <li><a href='#'>マイページ</a></li>
+            <li><a href='#'onClick={() => handleClick('Top')}>トップ</a></li>
+            <li><a href='#'onClick={() => handleClick()}>マイページ</a></li>
           </ul> 
-                 
-
         </div>
       
     </>
