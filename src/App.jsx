@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import book from '../img/book.png'
+import book from './img/book.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -11,10 +11,12 @@ function App() {
     <>
       <div className="top-area">
         <div className="book-area">
-        <img src={book}/>
+        <img className='image' src={book}/>
+         <div>
           <p className="title">title</p>
-          <p>\1000</p>
-          <button className="button">詳細</button>
+          <p className='list-row'>この本にはこんなことがかいてあります</p>
+        </div>
+          <p className='cost'>報奨金<br></br>\1000</p>
         </div>
       </div>
     </>

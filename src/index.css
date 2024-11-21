@@ -1,6 +1,6 @@
 .top-area {
   border: 2px solid #aacfd0;
-  width: 400px;
+  width: 100%;
   min-height: 1000px;
   padding: 8px;
   margin: 8px;
@@ -8,8 +8,10 @@
 }
 
 .title {
-  margin-top: 0;
+  width: 50%;
+  margin: 20px;
   font-weight: bold;
+  display: flex;
 }
 
 .button {
@@ -25,12 +27,28 @@ button:hover {
   cursor: pointer;
 }
 
-.book-area {
+.book-area { 
+  display: flex;
   border: 2px solid #aacfd0;
-  width: 400px;
+  width: 100%-16px;
   min-height: 200px;
-  padding: 8px;
+  padding: 2px;
   margin: 8px;
   border-radius: 8px;
   background-color: #c9dede;
+}
+
+.image{
+  display: flex;
+  max-width: 100px;
+  max-height: 200px;
+
+}
+
+.list-row{
+  max-width: 90%;
+}
+
+.cost{
+  margin-right: 0;
 }
