@@ -8,29 +8,25 @@ function BookDetail() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <div className="book-area">
-        <img className='image' src={book}/>
-         <div>
-          <p className="title">title</p>
-          <p className='list-row'>この本にはこんなことがかいてあります</p>
+    
+      <div className='book-d-area'>
+        <div className='book-d1-area'>
+         <img className='image-d' src={book}/>
         </div>
-         <div className='cost'>
-          <p>報奨金<br></br>\1000</p>
-          </div>
-        </div>
-      </div>    
-        <div className='sp-fixed-menu'>
-          <ul>
-            <li><a href='#'>トップ</a></li>
-            <li><a href='#'>マイページ</a></li>
-          </ul> 
-                 
-
-        </div>
+        <div className='book-d2-area line-left'>
+         
+          <p className='title-d'>タイトル</p>
+          <meter className='meter' min="0" max="100" value="50"></meter>
+           <p>有効期限</p>
+           <p>月</p>
+         </div>
+       
+      </div>
+        
+          
+     
       
-    </>
+    
   )
 }
 

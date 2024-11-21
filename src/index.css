@@ -123,12 +123,12 @@ button:hover {
   border-right: 1px solid #fff;
 }
 
-/*左側メニューを緑色に*/
+/*左側メニュー*/
 .sp-fixed-menu li:first-child{
   background: #aacfd0;
 }
 
-/*左側メニューをオレンジ色に*/
+/*右側メニュー*/
 .sp-fixed-menu li:last-child{
   background: #aacfd0;
 }
@@ -140,4 +140,47 @@ button:hover {
   display:block;
   width: 100%;
   padding:20px;
+}
+
+.line-left{
+  border-left:2px solid #000000;
+  height: 100%;
+}
+
+.book-d-area { 
+  display: flex;
+width: 100%;
+height: 100%;
+background-color: #e29797;
+}
+
+.book-d1-area { 
+  display: flex;
+width: 50%;
+height: 400px;
+background-color: #a51313;
+}
+
+.image-d{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.book-d2-area{
+  padding: 4px;
+  height: 392px;
+
+}
+
+.meter{
+  
+  width: 300px;
+  height: 40px;
+}
+
+.title-d{
+  font-size:  50px;
+  margin: 0px;
+  font-weight: bold;
 }
