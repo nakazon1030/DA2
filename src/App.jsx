@@ -6,6 +6,8 @@ import viteLogo from '/vite.svg'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
 
+import { AllBooks } from './AllBooks';
+
 function App() {
   const navigate = useNavigate();
 
@@ -36,7 +38,8 @@ function App() {
           <p>報奨金<br></br>\1000</p>
           </div>
         </div>
-      </div>    
+      </div>
+      <AllBooks />
         <div className='sp-fixed-menu'>
           <ul>
             <li><a href='#'onClick={() => handleClick('Top')}>トップ</a></li>
