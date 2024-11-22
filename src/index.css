@@ -192,7 +192,7 @@ background-color: #ffffff;
 
 .book-d2-area{
   width: 50%;
-  padding: 4px;
+  padding-top:30px ;
   height: 392px;
 
 }
@@ -205,7 +205,7 @@ background-color: #ffffff;
 .title-d{
  padding: 10px;
   font-size:  50px;
-  margin: 0px;
+  margin: 10px;
   font-weight: bold;
 }
 
@@ -215,13 +215,14 @@ background-color: #ffffff;
 }
 
 .date-d{
-  font-size: 20px;
+  margin: 30px auto;
+  font-size: 30px;
 }
 
 .regi-button{
   width: 80%;
   height: 10%;
- margin-top: 80px;
+ margin-top: 30px;
  font-size: 20px;
 }
 
@@ -231,6 +232,7 @@ background-color: #ffffff;
   padding:0;
   display: flex;
   justify-content: center;
+  margin: 30px auto ;
  }
 
  .button-d{

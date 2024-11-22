@@ -16,9 +16,9 @@ function BookDetail() {
         </div>
         <div className='book-d2-area line-left'>
          
-          <p className='title-d'>タイトル</p>
+          <p className='title-d'>title</p>
 
-          <meter className='meter' min="0" max="100" value="50"></meter>
+          <meter className='meter' min="0" max="100" value="90"></meter>
           <p>返金額:\1000</p>
           {Flag === 0 &&
           <div className='date-d'>
@@ -52,7 +52,7 @@ function BookDetail() {
        </div>
        <div>
         <p className='book-coment'>コメント</p>
-        <p>面白いですm</p>
+        <p>面白いですw</p>
        </div>
    </div>
 

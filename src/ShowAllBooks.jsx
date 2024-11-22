@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import book from './img/book.png'
-
+import { handleClick } from './handclick.jsx';
 export const ShowAllBooks = () =>{
+    
+    const navigate = useNavigate();
     const AllBooks = [
         {
             title:"title1",
@@ -22,9 +25,11 @@ export const ShowAllBooks = () =>{
             flag:"1"
         }];
     const booklist = AllBooks.map(onebook => (
-        <div className="book-area" onClick={() => handleClick('BookDetail')}>
-            <img className='image' src={onebook.image}/>
-            <div>
+        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
+            <div className="image">
+                <img src={onebook.image}/>
+            </div>
+            <div className='book-text'>
                 <p className="title">{onebook.title}</p>
                 <p className='list-row'>{onebook.comment}</p>
             </div>
@@ -32,6 +37,7 @@ export const ShowAllBooks = () =>{
                 <p>報奨金<br></br>\1000</p>
             </div>
         </div>
+        
         ));
     return (
         <>
