@@ -3,37 +3,20 @@ import { useNavigate } from 'react-router-dom';
 import './App.css'
 
 import { ShowAllBooks } from './ShowAllBooks';
-
+import { handleClick } from './handclick.jsx';
 function App() {
   const navigate = useNavigate();
-
-  const handleClick = (props) => {
-    // ボタンがクリックされたときに遷移
-    if (props == "BookDetail"){
-      navigate('/BookDetail');
-    }
-    else if (props == "top"){
-      navigate('/');
-    }
-    else if (props == "MyPage"){
-      navigate('/MyPage');
-    }
-    else{
-      navigate('/');
-    }
-    
-  };
 
   return (
     <>
       <div className='sp-fixed-menu'>
         <ul>
-          <li onClick={() => handleClick('Top')}>社内図書館システム</li>
-          <li onClick={() => handleClick('MyPage')}>マイページ</li>
+          <li onClick={() => handleClick(navigate, 'Top')}>社内図書館システム</li>
+          <li onClick={() => handleClick(navigate, 'MyPage')}>マイページ</li>
         </ul> 
       </div>
       <div className='main-page'>
-        <div className="book-area" onClick={() => handleClick('BookDetail')}>
+        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
         <div className="image"> 
           <img src={book}/> 
         </div>
