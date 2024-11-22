@@ -16,7 +16,7 @@ function App() {
         </ul> 
       </div>
       <div className='main-page'>
-        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
+        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail', onebook.index)}>
         <div className="image"> 
           <img src={book}/> 
         </div>

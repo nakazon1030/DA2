@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import book from './img/book.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
+// import book from './img/book.png'
+import { useParams } from 'react-router-dom';
 
 function BookDetail() {
 
  const [Flag, setFlag] = useState(0); // 現在の対象となるフラグ
+ const { index } = useParams();
 
+ 
   return (
     <div>
       <div className='book-d-area'>
         <div className='book-d1-area'>
-         <img className='image-d' src={book}/>
+         <img className='image-d' src={selectedBook.book}/>
         </div>
         <div className='book-d2-area line-left'>
          
-          <p className='title-d'>title</p>
+          <p className='title-d'>{selectedBook.title}</p>
 
           <meter className='meter' min="0" max="100" value="90"></meter>
           <p>返金額:\1000</p>
