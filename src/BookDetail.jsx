@@ -16,7 +16,7 @@ function BookDetail() {
         <div className='book-d2-area line-left'>
          
           <p className='title-d'>タイトル</p>
-          <meter className='meter' min="0" max="100" value="50"></meter>
+          <meter className='meter' min="0" max="1000" value="50"></meter>
           <p className='return-money'>返金額:\1000</p>
           <div className='date-d'>
            <p>有効期限</p>
