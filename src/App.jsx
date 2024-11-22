@@ -2,6 +2,8 @@ import book from './img/book.png'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
 
+import { ShowAllBooks } from './ShowAllBooks';
+
 function App() {
   const navigate = useNavigate();
 
@@ -43,7 +45,9 @@ function App() {
           <p>報奨金<br></br>\1000</p>
           </div>
         </div>
+        <ShowAllBooks />
       </div>          
+
     </>
   )
 }
