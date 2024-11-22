@@ -17,6 +17,7 @@ function BookDetail() {
         <div className='book-d2-area line-left'>
          
           <p className='title-d'>タイトル</p>
+
           <meter className='meter' min="0" max="100" value="50"></meter>
           <p>返金額:\1000</p>
           {Flag === 0 &&
@@ -41,16 +42,16 @@ function BookDetail() {
       }
       {Flag === 1 &&
        <div className='book-button-area'>
-        <button>コメント</button>
-        <button>売る</button>
+        <button className='button-d'>コメント</button>
+        <button className='button-d'>売る</button>
        </div>
       }
        <div>
-        <p>目次</p>
+        <p className='book-title'>目次</p>
         <p>ああああああああ</p>
        </div>
        <div>
-        <p>コメント</p>
+        <p className='book-coment'>コメント</p>
         <p>面白いですm</p>
        </div>
    </div>
