@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.jsx'
 
 import BookDetail from './BookDetail.jsx';
+import MyPage from './MyPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/BookDetail" element={<BookDetail />} />
+        <Route path="/MyPage" element={<MyPage />} />
       </Routes>
     </BrowserRouter>
 

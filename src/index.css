@@ -8,15 +8,15 @@
   border: 2px solid #aacfd0;
   width: 90%;
   min-height: 1000px;
-  padding: 8px;
+  padding: 8px auto;
   margin: 8px;
   border-radius: 8px;
 }
 
 .title {
-  width: 80%;
-  margin: 20px;
   font-weight: bold;
+  font-size:40px ;
+  margin:5px auto;
   display: flex;
 }
 
@@ -34,29 +34,41 @@ button:hover {
 }
 
 .book-area { 
+  text-align:center;
   display: flex;
+  justify-content:center;
   border: 2px solid #aacfd0;
   width: 100%-16px;
-  min-height: 200px;
+  height: 160px;
   padding: 2px;
   margin: 8px;
   border-radius: 8px;
   background-color: #c9dede;
+
 }
 
 .image{
-  display: flex;
-  max-width: 100px;
-  max-height: 200px;
-
+  padding: 0 auto;
+  width: 20%;
 }
 
+.image img {
+  margin: auto 0;
+  max-width: 150px;
+}
+
+.book-text{
+  width: 60%;
+}
 .list-row{
-  max-width: 100%;
+  display: flex;
+  text-align: left;
 }
 
 .cost{
-  margin: 0 0 0 auto;
+  width: 20%;
+  margin: auto  10px;
+  font-size: 30px;
 }
 
 .bar{
@@ -96,14 +108,20 @@ button:hover {
 }
 
 .sp-fixed-menu{
+  max-width: 1280px;
+  margin: 0 auto;
   position: fixed;
   width: 100%;
-  bottom: 0px;
+  height: 50px;
+  top: 0px;
   font-size: 0;
   opacity: 0.9;
   z-index: 99;
 }
 
+.main-page{
+  margin-top: 55px;
+}
 /*メニューを横並びにする*/
 .sp-fixed-menu ul{
   display: flex;
@@ -113,24 +131,29 @@ button:hover {
   width:100%;
 }
 
-.sp-fixed-menu li{
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  padding:0;
-  margin:0;
-  font-size: 14px;
-  border-right: 1px solid #fff;
-}
 
 /*左側メニュー*/
 .sp-fixed-menu li:first-child{
   background: #aacfd0;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 80%;
+  padding:15px 0;
+  margin:0;
+  font-size: 20px;
+  font-weight: bold;
+  border-right: 1px solid #fff;
 }
-
 /*右側メニュー*/
 .sp-fixed-menu li:last-child{
   background: #aacfd0;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 20%;
+  padding:17.5px 0;
+  margin:0;
+  font-size: 15px;
+  border-right: 1px solid #fff;
 }
 
 /*ボタンを調整*/
