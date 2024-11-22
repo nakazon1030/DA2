@@ -8,7 +8,7 @@ function BookDetail() {
   const [count, setCount] = useState(0)
 
   return (
-    
+    <div>
       <div className='book-d-area'>
         <div className='book-d1-area'>
          <img className='image-d' src={book}/>
@@ -17,11 +17,29 @@ function BookDetail() {
          
           <p className='title-d'>タイトル</p>
           <meter className='meter' min="0" max="100" value="50"></meter>
+          <p>返金額:\1000</p>
+          <div className='date-d'>
            <p>有効期限</p>
            <p>月</p>
+          </div>
+          <button className='regi-button'>登録</button>
          </div>
-       
       </div>
+       <div className='book-button-area'>
+        <button>コメント</button>
+        <button>売る</button>
+       </div>
+       <div>
+        <p>目次</p>
+        <p>ああああああああ</p>
+       </div>
+       <div>
+        <p>コメント</p>
+        <p>面白いですm</p>
+       </div>
+   </div>
+      
+       
         
           
      
