@@ -2,9 +2,7 @@ import book from './img/book.png'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
 
-import { ShowAllBooks } from './ShowAllBooks';
-
-function App() {
+function MyPage() {
   const navigate = useNavigate();
 
   const handleClick = (props) => {
@@ -28,8 +26,8 @@ function App() {
     <>
       <div className='sp-fixed-menu'>
         <ul>
-          <li onClick={() => handleClick('Top')}>社内図書館システム</li>
-          <li onClick={() => handleClick('MyPage')}>マイページ</li>
+          <li onClick={() => handleClick('Top')}>社内図書館システム(マイページ)</li>
+          <li onClick={() => handleClick('Top')}>トップに戻る</li>
         </ul> 
       </div>
       <div className='main-page'>
@@ -45,11 +43,9 @@ function App() {
           <p>報奨金<br></br>\1000</p>
           </div>
         </div>
-        <ShowAllBooks />
-      </div>          
-
+      </div>         
     </>
   )
 }
 
-export default App
+export default MyPage
