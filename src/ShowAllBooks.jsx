@@ -1,5 +1,6 @@
 import React from 'react';
-import book from './img/book.png'
+import book from './img/book.png';
+import { handleClick } from './App';
 
 export const ShowAllBooks = () =>{
     const AllBooks = [
@@ -22,9 +23,12 @@ export const ShowAllBooks = () =>{
             flag:"1"
         }];
     const booklist = AllBooks.map(onebook => (
+                
         <div className="book-area" onClick={() => handleClick('BookDetail')}>
-            <img className='image' src={onebook.image}/>
-            <div>
+            <div className='image'>
+                <img  src={onebook.image}/>
+            </div>
+            <div className='book-text'>
                 <p className="title">{onebook.title}</p>
                 <p className='list-row'>{onebook.comment}</p>
             </div>
@@ -32,6 +36,7 @@ export const ShowAllBooks = () =>{
                 <p>報奨金<br></br>\1000</p>
             </div>
         </div>
+        
         ));
     return (
         <>

@@ -4,6 +4,24 @@ import './App.css'
 
 import { ShowAllBooks } from './ShowAllBooks';
 
+// const navigate = useNavigate();
+// const handleClick = (props) => {
+//   // ボタンがクリックされたときに遷移
+//   if (props == "BookDetail"){
+//     navigate('/BookDetail');
+//   }
+//   else if (props == "top"){
+//     navigate('/');
+//   }
+//   else if (props == "MyPage"){
+//     navigate('/MyPage');
+//   }
+//   else{
+//     navigate('/');
+//   }
+  
+// };
+
 function App() {
   const navigate = useNavigate();
 
@@ -23,6 +41,8 @@ function App() {
     }
     
   };
+
+
 
   return (
     <>
@@ -52,4 +72,5 @@ function App() {
   )
 }
 
+export { handleClick };
 export default App
