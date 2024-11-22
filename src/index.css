@@ -252,3 +252,23 @@ background-color: #ffffff;
   font-weight: bold;
   text-align: left;
  }
+
+.message0{
+ position: relative;
+ height: 1000px;
+ }
+
+ .message0 p{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+ }
+ .message1{
+  font-size: 80px; 
+  text-align: center;
+  }
+
+/* .message2{
+ font-size: 40px ;
+ }  */
