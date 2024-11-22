@@ -19,6 +19,12 @@ function BookDetail() {
           <p className='title-d'>タイトル</p>
           <meter className='meter' min="0" max="100" value="50"></meter>
           <p>返金額:\1000</p>
+          {Flag === 0 &&
+          <div className='date-d'>
+            <br></br>
+            <br></br>
+          </div>
+          }
           {Flag === 1 &&
           <div className='date-d'>
            <p>有効期限</p>
@@ -29,6 +35,10 @@ function BookDetail() {
           {Flag === 1 && <button className='regi-button'onClick={() => setFlag(0)}>読む</button>}
          </div>
       </div>
+      {Flag === 0 &&
+       <div className='book-button-area'>
+       </div>
+      }
       {Flag === 1 &&
        <div className='book-button-area'>
         <button>コメント</button>
