@@ -8,6 +8,7 @@ import App from './App.jsx'
 import BookDetail from './BookDetail.jsx';
 import MyPage from './MyPage.jsx';
 import Message from './Message.jsx';
+import SrideShow from './SrideShow.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/BookDetail" element={<BookDetail />} />
         <Route path="/MyPage" element={<MyPage />} />
         <Route path="/Message" element={<Message />} />
+        <Route path="/SrideShow" element={<SrideShow />} />
       </Routes>
     </BrowserRouter>
 
