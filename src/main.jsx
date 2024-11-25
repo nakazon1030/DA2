@@ -8,6 +8,10 @@ import App from './App.jsx'
 import BookDetail from './BookDetail.jsx';
 import MyPage from './MyPage.jsx';
 import Message from './Message.jsx';
+import RankingData from './RankingData.jsx';
+import ShowRankingPage from './ShowRankingPage.jsx';
+import ShowRankingTime from './ShowRankingTime.jsx';
+import TestPage from './TestPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +21,10 @@ createRoot(document.getElementById('root')).render(
         <Route path="/BookDetail" element={<BookDetail />} />
         <Route path="/MyPage" element={<MyPage />} />
         <Route path="/Message" element={<Message />} />
+        <Route path="/RankingData" element={<RankingData />} />
+        <Route path="/ShowRankingPage" element={<ShowRankingPage />} />
+        <Route path="/ShowRankingTime" element={<ShowRankingTime />} />
+        <Route path="/TestPage" element={<TestPage />} />
       </Routes>
     </BrowserRouter>
 
