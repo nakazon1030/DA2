@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 430px;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
@@ -39,7 +39,7 @@ button:hover {
   justify-content:center;
   border: 2px solid #aacfd0;
   width: 100%-16px;
-  height: 160px;
+  height: 100px;
   padding: 2px;
   margin: 8px;
   border-radius: 8px;
@@ -47,18 +47,40 @@ button:hover {
 
 }
 
-.image{
+.obi{
+  text-align:left;
   padding: 0 auto;
   width: 20%;
 }
 
-.image img {
+.obi img {
+  text-align:left;
   margin: auto 0;
-  max-width: 150px;
+  max-width: 290px;
+  max-height: 95px;
+}
+
+
+
+.image{
+  text-align:center;
+  padding: 0 auto;
+  width: 30%;
+  border:solid 1px #11a4a7;
+  border-radius: 1%;
+}
+
+.image img {
+ 
+  text-align:center;
+  margin: auto 0;
+  max-width: 100px;
+  max-height: 95px;
 }
 
 .book-text{
-  width: 60%;
+  width: 70%;
+
 }
 .list-row{
   display: flex;
@@ -272,3 +294,25 @@ background-color: #ffffff;
 /* .message2{
  font-size: 40px ;
  }  */
+
+
+
+
+.slide {
+  display: none;
+  inset: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+
+.slide img {
+  text-align:left;
+  margin: auto 0;
+  max-width: 290px;
+  max-height: 95px;
+}
+
+}

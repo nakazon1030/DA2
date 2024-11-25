@@ -1,7 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import book from './img/book.png'
+import obi from './img/obi3.jpg'
+import SrideShow from './SrideShow.jsx';
 import { handleClick } from './handclick.jsx';
+
 export const ShowAllBooks = () =>{
     
     const navigate = useNavigate();
@@ -30,12 +33,11 @@ export const ShowAllBooks = () =>{
                 <img src={onebook.image}/>
             </div>
             <div className='book-text'>
-                <p className="title">{onebook.title}</p>
-                <p className='list-row'>{onebook.comment}</p>
+                <div className="obi">
+                    <SrideShow />  
+                </div>
             </div>
-            <div className='cost'>
-                <p>報奨金<br></br>\1000</p>
-            </div>
+
         </div>
         
         ));
