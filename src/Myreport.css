@@ -1,0 +1,89 @@
+.area{
+    display: flex;
+    width: 432px;
+    height: 150px;
+}
+
+.pyramid-page{
+    width: 35%;
+    background-color: powderblue;
+}
+
+.score-area{
+    width: 30%;
+    background-color: powderblue; 
+}
+
+.score-page{
+    display: flex;
+    height: 50%;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+
+.page-rank{
+    line-height: 75px;
+    font-size: 30px;  
+}
+
+.score-time{
+    display: flex;
+    height: 50%;
+    border-left: 2px solid white;
+}
+
+.clock{
+    width: 60px;
+    height: 90%;
+}
+
+.time-rank{
+    line-height: 75px;
+    font-size: 30px;  
+}
+
+
+.pyramid-time{
+    width: 35%;
+    background-color: powderblue;
+}
+
+.regi{
+    width: 432px;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+.regi-top{
+    display: flex;
+    width: 432px;
+    height: 20%;
+    background-color: azure;
+}
+
+.regi-page{
+    display: flex;
+    width: 50%;
+    background-color: aliceblue;
+    border: 2px solid powderblue;
+    margin: 4px;
+}
+
+.page-num{
+    line-height: 52px;
+    font-size: 20px;
+}
+
+.time-num{
+    line-height: 52px;
+    font-size: 20px;
+}
+
+.regi-time{
+    display: flex;
+    width: 50%;
+    background-color: aliceblue;
+    border: 2px solid powderblue;
+    margin: 4px;
+}
+
