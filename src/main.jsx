@@ -13,6 +13,9 @@ import ShowRankingPage from './ShowRankingPage.jsx';
 import ShowRankingTime from './ShowRankingTime.jsx';
 import TestPage from './TestPage.jsx';
 
+import Myreport from './Myreport.jsx';
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -25,6 +28,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/ShowRankingPage" element={<ShowRankingPage />} />
         <Route path="/ShowRankingTime" element={<ShowRankingTime />} />
         <Route path="/TestPage" element={<TestPage />} />
+        <Route path='/Myreport' element={<Myreport />} />
       </Routes>
     </BrowserRouter>
 
