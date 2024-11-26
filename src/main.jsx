@@ -18,7 +18,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/BookDetail" element={<BookDetail />} />
         <Route path="/MyPage" element={<MyPage />} />
         <Route path="/Message" element={<Message />} />
-        <Route path="/SrideShow" element={<SrideShow />} />
       </Routes>
     </BrowserRouter>
 
