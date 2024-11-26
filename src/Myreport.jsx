@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { handleClick } from './handclick.jsx';
+import { Showpastbook} from './Showpastbook.jsx';
 import './Myreport.css';
 import React, { useState } from 'react';
 import clock from './img/clock.png';
@@ -160,6 +161,7 @@ function Myreport() {
             <p className='past-b-title'>4</p>
             </div>
         </div>
+        <Showpastbook />
       </div>
     </div>
 
