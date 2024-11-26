@@ -20,19 +20,7 @@ function App() {
         </ul> 
       </div>
       <div className='main-page'>
-        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
-          
-          <div className="image"> 
-            <img src={book2}/> 
-          </div>
-
-          <div className='book-text'>
-            <div className='obi'>
-              <SrideShow />
-            </div>
-          </div> 
-
-        </div>
+        
         <ShowAllBooks />
       </div>          
 
