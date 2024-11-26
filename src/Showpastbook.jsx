@@ -7,6 +7,7 @@ import obi_zatudan2 from './img/obi-zatudan2.jpg'
 import SrideShow from './SrideShow.jsx';
 import { handleClick } from './handclick.jsx';
 import BookData from './BookData.jsx';
+import star from './img/star.png';
 
 export const Showpastbook = () =>{
     
@@ -39,6 +40,18 @@ export const Showpastbook = () =>{
     const booklist = BookData.map((Book) => { 
         if (Book.flag === 1) { 
             return (
+                <>
+            <div className='past-top'>
+                <div className='past-title'>
+                <p className='past-b-title'>{Book.title}</p>
+                </div>
+                <div className='past-good'>
+                <p className='past-b-title'>いいね</p>
+                <img  className='star'src={star} />
+                <p className='past-b-title'>4</p>
+                </div>
+            </div>
+            
                  <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}> 
                   <div className="image"> 
                    <img src={Book.image} alt={Book.title} />
@@ -49,6 +62,7 @@ export const Showpastbook = () =>{
                      </div>
                  </div>
                  </div> 
+                 </>
                  );
                  } 
                  return null; 
