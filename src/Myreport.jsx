@@ -1,11 +1,13 @@
 import book from './img/book.png'
 import { useNavigate } from 'react-router-dom';
 import './Myreport.css'
+import './index.css'
 
 import { ShowAllBooks } from './ShowAllBooks';
 import { handleClick } from './handclick.jsx';
 import clock from './img/clock.png'
 import book5 from './img/book5.png'
+import star from './img/star.png'
 function Myreport() {
   const navigate = useNavigate();
 
@@ -39,6 +41,23 @@ function Myreport() {
           <p className='time-num'>4 hour</p>
 
         </div>
+
+      </div>
+    </div>
+    <div className='past'>
+      <div className='past-area'>
+        <div className='past-top'>
+          <div className='past-title'>
+          <p className='past-b-title'>嫌われる勇気</p>
+          </div>
+          <div className='past-good'>
+           <p className='past-b-title'>いいね</p>
+           <img  className='star'src={star} ></img>
+           <p className='past-b-title'>4</p>
+          </div>
+       </div>
+        
+      
 
       </div>
     </div>
