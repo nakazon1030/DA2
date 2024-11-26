@@ -19,10 +19,12 @@
     height: 50%;
     border-bottom: 2px solid white;
     border-right: 2px solid white;  
+    align-items: center;
+    justify-content:center
 }
 
 .page-rank{
-    line-height: 75px;
+    /* line-height: 75px; */
     font-size: 30px;  
 }
 
@@ -30,6 +32,9 @@
     display: flex;
     height: 50%;
     border-left: 2px solid white;
+    align-items: center;
+    justify-content:center
+    
 }
 
 .clock{
@@ -38,7 +43,6 @@
 }
 
 .time-rank{
-    line-height: 75px;
     font-size: 30px;  
 }
 
@@ -67,15 +71,15 @@
     background-color: aliceblue;
     border: 2px solid powderblue;
     margin: 4px;
+    align-items: center;
+    justify-content:center
 }
 
 .page-num{
-    line-height: 52px;
     font-size: 20px;
 }
 
 .time-num{
-    line-height: 52px;
     font-size: 20px;
 }
 
@@ -85,5 +89,7 @@
     background-color: aliceblue;
     border: 2px solid powderblue;
     margin: 4px;
+    align-items: center;
+    justify-content:center
 }
 

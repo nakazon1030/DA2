@@ -1,13 +1,9 @@
 import book from './img/book.png'
-import obi from './img/obi4.jpg'
-import book2 from './img/koukoku.jpg'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
 
-//import {SrideShow} from './SrideShow.jsx';
 import { ShowAllBooks } from './ShowAllBooks';
 import { handleClick } from './handclick.jsx';
-import SrideShow from './SrideShow.jsx';
 function App() {
   const navigate = useNavigate();
 
@@ -21,17 +17,16 @@ function App() {
       </div>
       <div className='main-page'>
         <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
-          
-          <div className="image"> 
-            <img src={book2}/> 
+        <div className="image"> 
+          <img src={book}/> 
+        </div>
+         <div className='book-text'>
+          <p className="title">title</p>
+          <p className='list-row'>この本にはこんなことがかいてあります</p>
+        </div>
+         <div className='cost'>
+          <p>報奨金<br></br>\1000</p>
           </div>
-
-          <div className='book-text'>
-            <div className='obi'>
-              <SrideShow />
-            </div>
-          </div> 
-
         </div>
         <ShowAllBooks />
       </div>          
