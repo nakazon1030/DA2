@@ -12,7 +12,7 @@ import obi_kikikata2 from './img/obi-kikikata2.jpg'
 
 export const BookData = [
     {
-        title:"title1",
+        title:"雑談力",
         image:book_zatudan,
         comment:"部長おすすめ",
         flag:1,
@@ -20,7 +20,7 @@ export const BookData = [
         obi2:obi_zatudan2
     },
     {
-        title:"title2",
+        title:"なるほどデザイン",
         image:book_dezain,
         comment:"最近熱い",
         flag:0,
@@ -28,7 +28,7 @@ export const BookData = [
         obi2:obi_dezain2
     },
     {
-        title:"title3",
+        title:"なぜ聞き方がうまいのか？",
         image:book_kikikata,
         comment:"知る人ぞ知る名本",
         flag:1,
