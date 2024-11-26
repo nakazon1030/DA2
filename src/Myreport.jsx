@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-
-import './index.css'
+import { handleClick } from './handclick.jsx';
 import './Myreport.css';
 import React, { useState } from 'react';
 import clock from './img/clock.png';
@@ -91,6 +90,13 @@ function Myreport() {
 
   return (
     <>
+      <div className='sp-fixed-menu'>
+        <ul>
+          <li onClick={() => handleClick(navigate, 'Top')}>社内図書館システム(マイページ)</li>
+          <li onClick={() => handleClick(navigate, 'Top')}>戻る</li>
+        </ul> 
+      </div>
+      <div className='main-page'></div>
       <div className='area'>
         <div className='pyramid-page'>
             <img src={getPageRankImage(pageRank)} alt={`Rank ${pageRank}`} style={{ width: '150px' }}/>
@@ -142,23 +148,18 @@ function Myreport() {
           </>
         )}
       </div>
-
-    </div>
-    <div className='past'>
-      <div className='past-area'>
-        <div className='past-top'>
-          <div className='past-title'>
-          <p className='past-b-title'>嫌われる勇気</p>
-          </div>
-          <div className='past-good'>
-           <p className='past-b-title'>いいね</p>
-           <img  className='star'src={star} ></img>
-           <p className='past-b-title'>4</p>
-          </div>
-       </div>
-        
-      
-
+      <div className='past'>
+        <div className='past-area'>
+          <div className='past-top'>
+            <div className='past-title'>
+            <p className='past-b-title'>嫌われる勇気</p>
+            </div>
+            <div className='past-good'>
+            <p className='past-b-title'>いいね</p>
+            <img  className='star'src={star} ></img>
+            <p className='past-b-title'>4</p>
+            </div>
+        </div>
       </div>
     </div>
 

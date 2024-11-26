@@ -13,7 +13,7 @@ export const ShowAllBooks = () =>{
     const navigate = useNavigate();
     
     const booklist = BookData.map(Book => (
-        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
+        <div className="book-area" onClick={() => handleClick(navigate, '#')}>
             <div className="image">
                 <img src={Book.image}/>
             </div>
