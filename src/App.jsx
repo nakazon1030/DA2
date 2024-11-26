@@ -16,18 +16,7 @@ function App() {
         </ul> 
       </div>
       <div className='main-page'>
-        <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
-        <div className="image"> 
-          <img src={book}/> 
-        </div>
-         <div className='book-text'>
-          <p className="title">title</p>
-          <p className='list-row'>この本にはこんなことがかいてあります</p>
-        </div>
-         <div className='cost'>
-          <p>報奨金<br></br>\1000</p>
-          </div>
-        </div>
+
         <ShowAllBooks />
       </div>          
 

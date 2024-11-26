@@ -1,40 +1,25 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import book from './img/book.png'
-import obi from './img/obi3.jpg'
+import book_zatudan from './img/zatudan.jpg'
+import obi_zatudan1 from './img/obi-zatudan1.jpg'
+import obi_zatudan2 from './img/obi-zatudan2.jpg'
 import SrideShow from './SrideShow.jsx';
 import { handleClick } from './handclick.jsx';
+import BookData from './BookData.jsx';
 
 export const ShowAllBooks = () =>{
     
     const navigate = useNavigate();
-    const AllBooks = [
-        {
-            title:"title1",
-            image:book,
-            comment:"部長おすすめ",
-            flag:"1"
-        },
-        {
-            title:"title2",
-            image:book,
-            comment:"最近熱い",
-            flag:"0"
-        },
-        {
-            title:"title3",
-            image:book,
-            comment:"知る人ぞ知る名本",
-            flag:"1"
-        }];
-    const booklist = AllBooks.map(onebook => (
+    
+    const booklist = BookData.map(Book => (
         <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}>
             <div className="image">
-                <img src={onebook.image}/>
+                <img src={Book.image}/>
             </div>
             <div className='book-text'>
                 <div className="obi">
-                    <SrideShow />  
+                    <SrideShow obi1={Book.obi1} obi2={Book.obi2} />  
                 </div>
             </div>
 
