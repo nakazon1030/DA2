@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+
+import './index.css'
 import './Myreport.css';
 import React, { useState } from 'react';
 import clock from './img/clock.png';
@@ -16,7 +18,7 @@ import pyramid8 from "./img/pyramid (8).png";
 import pyramid9 from "./img/pyramid (9).png";
 import pyramid10 from "./img/pyramid (10).png";
 import pyramid11 from "./img/pyramid (11).png";
-
+import star from './img/star.png'
 function Myreport() {
   const navigate = useNavigate();
 
@@ -140,6 +142,26 @@ function Myreport() {
           </>
         )}
       </div>
+
+    </div>
+    <div className='past'>
+      <div className='past-area'>
+        <div className='past-top'>
+          <div className='past-title'>
+          <p className='past-b-title'>嫌われる勇気</p>
+          </div>
+          <div className='past-good'>
+           <p className='past-b-title'>いいね</p>
+           <img  className='star'src={star} ></img>
+           <p className='past-b-title'>4</p>
+          </div>
+       </div>
+        
+      
+
+      </div>
+    </div>
+
     </>
   );
 }

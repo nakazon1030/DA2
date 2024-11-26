@@ -1,6 +1,6 @@
 import book from './img/book.png'
-import obi1 from './img/obi3.jpg'
-import obi2 from './img/obi4.jpg'
+// import obi1 from './img/obi-koukoku1.jpg'
+// import obi2 from './img/obi-zatudan1.jpg'
 import book2 from './img/koukoku.jpg'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
@@ -12,7 +12,7 @@ import './index.css'
 import React, { useState, useEffect } from "react";
 
 
-export default function SrideShow() {
+export default function SrideShow({obi1,obi2}) {
   // 表示したい画像のパスを配列imagesに格納
   const images = [obi1, obi2];
 

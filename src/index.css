@@ -47,6 +47,25 @@ button:hover {
 
 }
 
+
+.obi{
+  text-align:left;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 20%;
+}
+
+.obi img {
+  text-align:left;
+  margin: auto 0;
+  max-width: 290px;
+  max-height: 95px;
+}
+
+
+
+
 .image{
   padding: 0 auto;
   width: 20%;
