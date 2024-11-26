@@ -1,7 +1,6 @@
 import book from './img/book.png'
 import { useNavigate } from 'react-router-dom';
 import './App.css'
-
 import { ShowAllBooks } from './ShowAllBooks';
 import { handleClick } from './handclick.jsx';
 function App() {
@@ -12,7 +11,7 @@ function App() {
       <div className='sp-fixed-menu'>
         <ul>
           <li onClick={() => handleClick(navigate, 'Top')}>社内図書館システム</li>
-          <li onClick={() => handleClick(navigate, 'MyPage')}>マイページ</li>
+          <li onClick={() => handleClick(navigate, 'MyReport')}>マイページ</li>
         </ul> 
       </div>
       <div className='main-page'>

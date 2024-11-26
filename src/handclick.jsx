@@ -7,8 +7,8 @@ export const handleClick = (navigate, route) => {
       case "Top":
         navigate('/');
         break;
-      case "MyPage":
-        navigate('/MyPage');
+      case "MyReport":
+        navigate('/MyReport');
         break;
       default:
         navigate('/');
