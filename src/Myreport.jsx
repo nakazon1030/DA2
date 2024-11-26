@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import './Myreport.css'
 import './index.css'
 
+
 import { ShowAllBooks } from './ShowAllBooks';
 import { handleClick } from './handclick.jsx';
+import { Showpastbook } from './Showpastbook.jsx';
 import clock from './img/clock.png'
 import book5 from './img/book5.png'
 import star from './img/star.png'
@@ -56,9 +58,7 @@ function Myreport() {
            <p className='past-b-title'>4</p>
           </div>
        </div>
-        
-      
-
+       <Showpastbook />
       </div>
     </div>
     </>
