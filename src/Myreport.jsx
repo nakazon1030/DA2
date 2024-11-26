@@ -151,7 +151,7 @@ function Myreport() {
       </div>
       <div className='past'>
         <div className='past-area'>
-          <div className='past-top'>
+          {/* <div className='past-top'>
             <div className='past-title'>
             <p className='past-b-title'>嫌われる勇気</p>
             </div>
@@ -159,11 +159,12 @@ function Myreport() {
             <p className='past-b-title'>いいね</p>
             <img  className='star'src={star} ></img>
             <p className='past-b-title'>4</p>
-            </div>
+            </div> */}
+             <Showpastbook />
         </div>
-        <Showpastbook />
+       
       </div>
-    </div>
+   
 
     </>
   );
