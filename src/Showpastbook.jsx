@@ -55,16 +55,16 @@ export const Showpastbook = () =>{
             
 
                  <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail',Book.id)}> 
-                  <div className="image"> 
-                   <img src={Book.image} alt={Book.title} />
-                    </div> 
                     <div className="book-text">
                         <div className='bg'>
                             <div className="obi">                         
                                 <SrideShow images={Book.images} /> 
                             </div>    
                         </div> 
-                 </div>
+                    </div>
+                    <div className="image"> 
+                        <img src={Book.image} alt={Book.title} />
+                    </div> 
                  </div> 
                  </>
                  );
