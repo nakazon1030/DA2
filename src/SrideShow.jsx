@@ -1,4 +1,5 @@
 import book from './img/book.png'
+import waku from './img/waku3r.png'
 // import obi1 from './img/obi-koukoku1.jpg'
 // import obi2 from './img/obi-zatudan1.jpg'
 import book2 from './img/koukoku.jpg'
@@ -39,11 +40,14 @@ export default function SrideShow({obi1,obi2}) {
             index === currentImageIndex ? "active" : ""
           }`}
         >
-          <img
+         <div className='obi-waku'>
+          <img className='obi-waku-1' src={waku} />
+          <img className='obi-waku-2'
             src={obi}
             alt={`Slide ${index}`}
             // objectFit="cover"    
           />
+          </div>
         </div>
       ))}
     </div>
