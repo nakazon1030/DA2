@@ -1,8 +1,12 @@
-export const handleClick = (navigate, route) => {
+export const handleClick = (navigate, route, id) => {
     // ボタンがクリックされたときに遷移
     switch (route) {
       case "BookDetail":
-        navigate('/BookDetail');
+        const basePath = '/BookDetail';
+        const fullPath = basePath + '/'+id;
+        console.log(fullPath);
+        //console.log(id);
+        navigate(fullPath);
         break;
       case "Top":
         navigate('/');
