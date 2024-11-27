@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Myreport from './Myreport.jsx'
 import TestPage from './TestPage.jsx'
 import Edit from './Edit.jsx'
+import BookDetail from './BookDetail.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
