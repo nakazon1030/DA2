@@ -111,6 +111,11 @@ const Edit = () => {
       setBorderWidth(e.target.value);
       setElements(elements.map(el => el.id === selectedElement.id ? { ...el, borderWidth: parseInt(e.target.value, 10) } : el));
     };
+    const deleteElement = () => {
+      if (selectedElement) {
+        setElements(elements.filter(el => el.id !== selectedElement.id));
+        setSelectedElement(null);
+      }};
   
     return (
       <>
@@ -119,8 +124,9 @@ const Edit = () => {
           <button onClick={() => addElement('rect')}>長方形</button>
           <button onClick={() => addElement('circle')}>円</button>
           <button onClick={() => addElement('triangle')}>三角形</button>
-          <button onClick={saveAsHtml}>保存</button>
         </div>
+        <button className='saveBtn'onClick={saveAsHtml}>保存</button>
+        <button onClick={deleteElement}>選択した要素を消去</button>
         <div
           id="designArea"
           className="design-area" // クラス名を追加
@@ -179,18 +185,18 @@ const Edit = () => {
                 )}
                 {el.type === 'text' && (
                   <div
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      backgroundColor: el.color === 'transparent' ? 'transparent' : el.color,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      cursor: 'pointer',
-                      color: el.textColor,
-                      fontSize: `${el.fontSize}px`,
-                      border: `${el.borderWidth}px solid ${el.borderColor}`,
-                    }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: el.color === 'transparent' ? 'transparent' : el.color,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    color: el.textColor,
+                    fontSize: `${el.fontSize}px`,
+                    border: el.type === 'text' ? 'none' : `${el.borderWidth}px solid ${el.borderColor}`, // 修正
+                  }}
                   >
                     {el.text}
                   </div>
@@ -203,7 +209,7 @@ const Edit = () => {
           (
             <div style={{ marginTop: '10px' }}>
               <div className='figreEditArea'>
-                <p>図形編集</p>
+                <p >図形編集</p>
                 <select value={color} onChange={handleColorChange} style={{ marginRight: '10px' }}>
                   {colors.map((color) => (
                     <option key={color.value} value={color.value}>{color.name}</option>

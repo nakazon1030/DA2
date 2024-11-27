@@ -3,15 +3,24 @@
   align-items: center;
   justify-content: center;
   width: 400px;
-  height: 50px;
+  height: 70px;
   background-color: aliceblue;
+  margin: 10px auto;
+  flex-wrap: wrap;
 
 }
 .addArea button {
-  margin: auto 5px;
+  margin: 5px 5px;
 	font-weight: bold;
+  width: 125px;
 	border: 2px solid #27acd9;
 	color: #27acd9;
+}
+.saveBtn {
+	font-weight: bold;
+  width: 125px;
+	border: 2px solid rgb(255, 192, 192);
+	color: rgb(255, 192, 192);
 }
 
 .design-area {
@@ -23,14 +32,15 @@
   }
 
 .figreEditArea{
-  width:  430px;
+  padding-top: 10px ;
+  width:  400px;
   height: 80px;
   border: 1px solid powderblue;
   background-color: aliceblue;
   margin: 10px auto;
 }
 .textEditArea{
-    width:  430px;
+    width:  400px;
     height: 80px;
     border: 1px solid powderblue;
     background-color: aliceblue;
