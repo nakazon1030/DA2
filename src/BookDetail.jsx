@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react';
 import book from './img/book.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
+import { useParams } from 'react-router-dom';
+
 // import './App.css'
 
 function BookDetail() {
 
  const [Flag, setFlag] = useState(0); // 現在の対象となるフラグ
+ const { id } = useParams();
 
   return (
     <div>
+      <p>Book ID: {id}</p>
       <div className='book-d-area'>
         <div className='book-d1-area'>
          <img className='image-d' src={book}/>
