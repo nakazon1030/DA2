@@ -1,0 +1,41 @@
+.addArea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 50px;
+  background-color: aliceblue;
+
+}
+.addArea button {
+  margin: auto 5px;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+}
+
+.design-area {
+    width: 400px;
+    height: 140px;
+    border: 1px solid powderblue;
+    position: relative;
+    margin: 10px auto;
+  }
+
+.figreEditArea{
+  width:  430px;
+  height: 80px;
+  border: 1px solid powderblue;
+  background-color: aliceblue;
+  margin: 10px auto;
+}
+.textEditArea{
+    width:  430px;
+    height: 80px;
+    border: 1px solid powderblue;
+    background-color: aliceblue;
+    margin: 10px auto;
+}
+.textEditArea input{
+  width: 50px;
+}
