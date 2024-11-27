@@ -4,6 +4,7 @@ import book from './img/book.png'
 import book_zatudan from './img/zatudan.jpg'
 import obi_zatudan1 from './img/obi-zatudan1.jpg'
 import obi_zatudan2 from './img/obi-zatudan2.jpg'
+import obiplus from './img/obiplus.png'
 import SrideShow from './SrideShow.jsx';
 import { handleClick } from './handclick.jsx';
 import BookData from './BookData.jsx';
@@ -59,6 +60,9 @@ export const Showpastbook = () =>{
                     </div> 
                     <div className="book-text">
                         <div className='bg'>
+                            <div>
+                                {/* <img src={obiplus} /> */}
+                            </div>
                             <div className="obi">                         
                                 <SrideShow images={Book.images} /> 
                             </div>    

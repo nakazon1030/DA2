@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import html2canvas from 'html2canvas';
 import './TestPage.css'; // CSSファイルをリネーム
+import BookData from './BookData';
+
 
 const TestPage = () => {
+  //test
+  const id = 1;
+  //
   const [elements, setElements] = useState([]);
   const [selectedElement, setSelectedElement] = useState(null);
   const [editingText, setEditingText] = useState('');
@@ -74,6 +79,10 @@ const TestPage = () => {
     const element = document.getElementById('designArea');
     const htmlContent = element.outerHTML;
     setHtmlContent(htmlContent); 
+    //
+    
+    //
+
     console.log(htmlContent);
     // const blob = new Blob([htmlContent], { type: 'text/html' });
     // const link = document.createElement('a');
