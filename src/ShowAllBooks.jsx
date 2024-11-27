@@ -19,7 +19,7 @@ export const ShowAllBooks = () =>{
             </div>
             <div className='book-text'>
                 <div className="obi">
-                    <SrideShow obi1={Book.obi1} obi2={Book.obi2} />  
+                    <SrideShow images={Book.images} />  
                 </div>
             </div>
 

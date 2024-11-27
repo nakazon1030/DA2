@@ -12,9 +12,9 @@ import './index.css'
 import React, { useState, useEffect } from "react";
 
 
-export default function SrideShow({obi1,obi2}) {
+export default function SrideShow({images}) {
   // 表示したい画像のパスを配列imagesに格納
-  const images = [obi1, obi2];
+  //const images = [obi1, obi2];
 
   // 表示する画像のindexをStateで管理(JSX内で使用)
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
