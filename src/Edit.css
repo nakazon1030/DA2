@@ -34,18 +34,59 @@
 .figreEditArea{
   padding-top: 10px ;
   width:  400px;
-  height: 80px;
+  height: 130px;
   border: 1px solid powderblue;
   background-color: aliceblue;
   margin: 10px auto;
+  border-radius: 10px/10px;
 }
+
+.figreEditArea input{
+  width: 30px;
+}
+
 .textEditArea{
+    padding-top: 10px;
     width:  400px;
-    height: 80px;
+    height: 130px;
     border: 1px solid powderblue;
     background-color: aliceblue;
     margin: 10px auto;
+    border-radius: 10px/10px;
 }
 .textEditArea input{
-  width: 50px;
+  width: 30px;
+}
+
+.textEditAreaInput input{
+  width: 300px;
+}
+
+.saveAndDeleateArea{
+  width: 400px;
+  height: 40px;
+  background-color: aliceblue;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  flex-wrap: wrap;
+  border-radius: 10px/10px;
+}
+
+.editItem{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.editPtag{
+  margin-right: 10px;
+  font-weight: bold;
+  color:#27acd9;
+}
+
+.editTitle{
+  font-weight: bold;
+  color: rgba(43, 76, 226, 0.612);
 }

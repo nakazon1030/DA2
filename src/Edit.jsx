@@ -14,28 +14,28 @@ const Edit = () => {
     const [borderWidth, setBorderWidth] = useState(1);
   
     const colors = [
-      { name: 'Transparent', value: 'transparent' },
-      { name: 'Light Blue', value: 'lightblue' },
-      { name: 'Light Coral', value: 'lightcoral' },
-      { name: 'Light Green', value: 'lightgreen' },
-      { name: 'Light Yellow', value: 'lightyellow' },
-      { name: 'Light Pink', value: 'lightpink' },
-      { name: 'Light Gray', value: 'lightgray' },
-      { name: 'Light Goldenrod Yellow', value: 'lightgoldenrodyellow' },
-      { name: 'Light Cyan', value: 'lightcyan' },
-      { name: 'Light Sea Green', value: 'lightseagreen' },
-      { name: 'Light Steel Blue', value: 'lightsteelblue' },
+      { name: '無色', value: 'transparent' },
+      { name: '水', value: 'lightblue' },
+      { name: 'ストロベリー', value: 'lightcoral' },
+      { name: 'ライム', value: 'lightgreen' },
+      { name: 'レモン', value: 'lightyellow' },
+      { name: 'ピーチ', value: 'lightpink' },
+      { name: 'ゴマ', value: 'lightgray' },
+      { name: 'ナシ', value: 'lightgoldenrodyellow' },
+      { name: 'ソーダ', value: 'lightcyan' },
+      { name: 'エメラルド', value: 'lightseagreen' },
+      { name: 'ブルーベリー', value: 'lightsteelblue' },
     ];
   
     const textColors = [
-      { name: 'Black', value: 'black' },
-      { name: 'Red', value: 'red' },
-      { name: 'Green', value: 'green' },
-      { name: 'Blue', value: 'blue' },
-      { name: 'Yellow', value: 'yellow' },
-      { name: 'Magenta', value: 'magenta' },
-      { name: 'Cyan', value: 'cyan' },
-      { name: 'White', value: 'white' },
+      { name: '黒', value: 'black' },
+      { name: '赤', value: 'red' },
+      { name: '緑', value: 'green' },
+      { name: '青', value: 'blue' },
+      { name: '黄', value: 'yellow' },
+      { name: 'マゼンタ', value: 'magenta' },
+      { name: '水色', value: 'cyan' },
+      { name: '白', value: 'white' },
     ];
   
     const addElement = (type) => {
@@ -125,8 +125,11 @@ const Edit = () => {
           <button onClick={() => addElement('circle')}>円</button>
           <button onClick={() => addElement('triangle')}>三角形</button>
         </div>
-        <button className='saveBtn'onClick={saveAsHtml}>保存</button>
-        <button onClick={deleteElement}>選択した要素を消去</button>
+        <div className='saveAndDeleateArea'>
+          <button className='saveBtn'onClick={saveAsHtml}>保存</button>
+          <button onClick={deleteElement}>選択した要素を消去</button>
+        </div>
+
         <div
           id="designArea"
           className="design-area" // クラス名を追加
@@ -209,17 +212,25 @@ const Edit = () => {
           (
             <div style={{ marginTop: '10px' }}>
               <div className='figreEditArea'>
-                <p >図形編集</p>
+                <p className='editTitle'>図形編集</p>
+                <ul className='editItem'>
+                <p className='editPtag'>背景</p>
                 <select value={color} onChange={handleColorChange} style={{ marginRight: '10px' }}>
                   {colors.map((color) => (
                     <option key={color.value} value={color.value}>{color.name}</option>
                   ))}
                 </select>
+                </ul>
+                <ul className='editItem'>
+                <p className='editPtag'>枠</p>
                 <select value={borderColor} onChange={handleBorderColorChange} style={{ marginRight: '10px' }}>
                   {textColors.map((color) => (
                     <option key={color.value} value={color.value}>{color.name}</option>
                   ))}
                 </select>
+                </ul>
+                <ul className='editItem'>
+                <p className='editPtag'>枠線太さ</p>
                 <input
                 type="number"
                 value={borderWidth}
@@ -227,23 +238,32 @@ const Edit = () => {
                 min="0"
                 style={{ marginRight: '10px' }}
                 />
+                </ul>
               </div>
               <div className='textEditArea'>
-                <p>テキスト編集</p>
+                <p className='editTitle'>テキスト編集</p>
                 {selectedElement.type === 'text' && (
                   <>
-                    
-                    <input
-                      type="text"
-                      value={editingText}
-                      onChange={handleTextChange}
-                      style={{ marginRight: '10px' }}
-                    />
-                    <select value={textColor} onChange={handleTextColorChange} style={{ marginRight: '10px' }}>
-                      {textColors.map((color) => (
-                        <option key={color.value} value={color.value}>{color.name}</option>
-                      ))}
-                    </select>
+                    <ul className='editItem'>
+                      <div className='textEditAreaInput'>
+                      <input
+                        type="text"
+                        value={editingText}
+                        onChange={handleTextChange}
+                        style={{ marginRight: '10px' }}
+                      />
+                      </div>
+                    </ul>
+                    <ul className='editItem'>
+                      <p className='editPtag'>色</p>
+                      <select value={textColor} onChange={handleTextColorChange} style={{ marginRight: '10px' }}>
+                        {textColors.map((color) => (
+                          <option key={color.value} value={color.value}>{color.name}</option>
+                        ))}
+                      </select>
+                    </ul>
+                    <ul className='editItem'>
+                      <p className='editPtag'>Font Size</p>
                     <input
                       type="number"
                       value={fontSize}
@@ -251,6 +271,7 @@ const Edit = () => {
                       min="1"
                       style={{ marginRight: '10px' }}
                     />
+                    </ul>
                   </>
                 )}
               </div> 
