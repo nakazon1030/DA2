@@ -14,13 +14,13 @@ export const ShowAllBooks = () =>{
     
     const booklist = BookData.map(Book => (
         <div className="book-area" onClick={() => handleClick(navigate, '#')}>
+            <div className='book-text'>
+                    <div className="obi">
+                        <SrideShow images={Book.images} />  
+                    </div>
+            </div>
             <div className="image">
                 <img src={Book.image}/>
-            </div>
-            <div className='book-text'>
-                <div className="obi">
-                    <SrideShow images={Book.images} />  
-                </div>
             </div>
 
         </div>

@@ -36,52 +36,63 @@ button:hover {
 .book-area { 
   text-align:center;
   display: flex;
-  justify-content:center;
+  justify-content:space-between;
   border: 2px solid #aacfd0;
   width: 100%-16px;
-  height: 100px;
-  padding: 2px;
-  margin: 8px;
+  height: 150px;
+  /* padding: 2px; */
+  margin: 15px;
   border-radius: 8px;
   background-color: powderblue;
 
 }
 
 .obi{
+  display: flex;
+  align-items: center;
+  justify-content: left;
   text-align:left;
-  padding-left: 10px;
+  /* padding-left: 10px;
   padding-top: 3px;
-  padding-bottom: 3px;
-  width: 20%;
+  padding-bottom: 3px; */
+  width: 100%;
+  height: 100%;
 }
 
 .obi img {
+
   text-align:left;
-  margin: auto 0;
-  max-width: 290px;
-  max-height: 95px;
+  /* align-items: center; */
+  margin: auto 0 ;
+  /* width: px; */
+  /* height: 190px; */
 }
 
 
 
 .image{
+  display: flex;
+  justify-content:right;
+  align-items: flex-end;
   text-align:center;
-  padding: 0 auto;
-  width: 30%;
-  border:solid 1px #11a4a7;
+  /* padding: 0 auto; */
+  width: 15%;
+  /* border:solid 1px #11a4a7; */
   border-radius: 1%;
 }
 
 .image img {
- 
   text-align:center;
-  margin: auto 0;
-  max-width: 100px;
-  max-height: 95px;
+  /* margin: auto 0; */
+  max-width: 80px;
+  max-height: 75px;
 }
 
 .book-text{
-  width: 70%;
+  display: flex;
+  align-items:left;
+  width: 80%;
+  border: #000000;
 
 }
 .list-row{
@@ -309,12 +320,35 @@ background-color: #ffffff;
 .slide.active {
   display: block;
   opacity: 1;
+}
 
 .slide img {
   text-align:left;
   margin: auto 0;
-  max-width: 290px;
-  max-height: 95px;
+  /* max-width: 345px;
+  max-height: 115px; */
 }
 
+.obi-waku{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
+.obi-waku-1{
+    display: block;
+    width: 350px;
+    height: 180px;
+}
+.obi-waku-2{
+    position: absolute;
+    left:5%;
+    top: 20%;
+    /* right: 0%;
+    bottom: 0%; */
+    width: 300px;
+
+    height: auto;
+}
+
+

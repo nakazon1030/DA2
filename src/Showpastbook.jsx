@@ -53,6 +53,7 @@ export const Showpastbook = () =>{
                 </div>
             </div>
             
+
                  <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail',Book.id)}> 
                   <div className="image"> 
                    <img src={Book.image} alt={Book.title} />
