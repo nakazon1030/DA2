@@ -1,0 +1,51 @@
+.addArea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 70px;
+  background-color: aliceblue;
+  margin: 10px auto;
+  flex-wrap: wrap;
+
+}
+.addArea button {
+  margin: 5px 5px;
+	font-weight: bold;
+  width: 125px;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+}
+.saveBtn {
+	font-weight: bold;
+  width: 125px;
+	border: 2px solid rgb(255, 192, 192);
+	color: rgb(255, 192, 192);
+}
+
+.design-area {
+    width: 400px;
+    height: 140px;
+    border: 1px solid powderblue;
+    position: relative;
+    margin: 10px auto;
+  }
+
+.figreEditArea{
+  padding-top: 10px ;
+  width:  400px;
+  height: 80px;
+  border: 1px solid powderblue;
+  background-color: aliceblue;
+  margin: 10px auto;
+}
+.textEditArea{
+    width:  400px;
+    height: 80px;
+    border: 1px solid powderblue;
+    background-color: aliceblue;
+    margin: 10px auto;
+}
+.textEditArea input{
+  width: 50px;
+}

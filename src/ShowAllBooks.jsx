@@ -16,13 +16,12 @@ export const ShowAllBooks = () =>{
         <div className="book-area" onClick={() => handleClick(navigate, '#')}>
             <div className='book-text'>
                     <div className="obi">
-                        <SrideShow obi1={Book.obi1} obi2={Book.obi2} />  
+                        <SrideShow images={Book.images} />  
                     </div>
             </div>
             <div className="image">
                 <img src={Book.image}/>
             </div>
-            
 
         </div>
         

@@ -39,6 +39,7 @@ export const Showpastbook = () =>{
 
     const booklist = BookData.map((Book) => { 
         if (Book.flag === 1) { 
+            console.log(Book.id);
             return (
                 <>
             <div className='past-top'>
@@ -52,15 +53,18 @@ export const Showpastbook = () =>{
                 </div>
             </div>
             
-                 <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail')}> 
-                    <div className="book-text"> 
-                     <div className="obi"> 
-                      <SrideShow obi1={Book.obi1} obi2={Book.obi2} /> 
-                     </div>
-                    </div>
-                    <div className="image"> 
+
+                 <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail',Book.id)}> 
+                  <div className="image"> 
                    <img src={Book.image} alt={Book.title} />
-                  </div> 
+                    </div> 
+                    <div className="book-text">
+                        <div className='bg'>
+                            <div className="obi">                         
+                                <SrideShow images={Book.images} /> 
+                            </div>    
+                        </div> 
+                 </div>
                  </div> 
                  </>
                  );
