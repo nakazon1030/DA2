@@ -9,6 +9,9 @@ const DisplayPage = () => {
         <div key={book.id}>
           <h2>{book.title}</h2>
           <div dangerouslySetInnerHTML={{ __html: book.htmlContent }} />
+          {book.images.map((image, index) => (
+            <img key={index} src={image} alt={`Book ${book.id} Image ${index + 1}`} />
+          ))}
         </div>
       ))}
     </div>

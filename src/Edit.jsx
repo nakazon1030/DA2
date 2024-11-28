@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import html2canvas from 'html2canvas';
 import './Edit.css'; // CSSファイルをリネーム
+import { useNavigate } from 'react-router-dom';
+import { handleClick } from './handclick.jsx';
+import { saveAsPng } from './SaveAsPng.jsx';
 
 const Edit = () => {
+  const navigate = useNavigate();
     const [elements, setElements] = useState([]);
     const [selectedElement, setSelectedElement] = useState(null);
     const [editingText, setEditingText] = useState('');
@@ -12,7 +16,9 @@ const Edit = () => {
     const [fontSize, setFontSize] = useState(16);
     const [borderColor, setBorderColor] = useState('black');
     const [borderWidth, setBorderWidth] = useState(1);
-  
+
+    const [selectedBookId, setSelectedBookId] = useState(1);
+    
     const colors = [
       { name: '無色', value: 'transparent' },
       { name: '水', value: 'lightblue' },
@@ -59,18 +65,6 @@ const Edit = () => {
       ]);
     };
 
-    const saveAsHtml = () => {
-      const element = document.getElementById('designArea');
-      const htmlContent = element.outerHTML;
-      setHtmlContent(htmlContent); 
-      console.log(htmlContent);
-      // const blob = new Blob([htmlContent], { type: 'text/html' });
-      // const link = document.createElement('a');
-      // link.href = URL.createObjectURL(blob);
-      // link.download = 'design.html';
-      // link.click();
-      //上記はダウンロード機能を使いたい場合有効化してください。
-    };
   
     const handleElementClick = (element) => {
       setSelectedElement(element);
@@ -119,6 +113,12 @@ const Edit = () => {
   
     return (
       <>
+        <div className='sp-fixed-menu'>
+          <ul>
+            <li onClick={() => handleClick(navigate, 'Top')}>社内図書館システム(マイページ)</li>
+            <li onClick={() => handleClick(navigate, 'MyReport')}>戻る</li>
+          </ul> 
+        </div>
         <div className='addArea'>
           <button onClick={() => addElement('text')}>テキストBOX</button>
           <button onClick={() => addElement('rect')}>長方形</button>
@@ -126,7 +126,7 @@ const Edit = () => {
           {/* <button onClick={() => addElement('triangle')}>三角形</button> */}
         </div>
         <div className='saveAndDeleateArea'>
-          <button className='saveBtn'onClick={saveAsHtml}>保存</button>
+          <button className='saveBtn'onClick={() => saveAsPng('designArea', selectedBookId)}>保存</button>
           <button className='deleateBtn' onClick={deleteElement}>選択した要素を消去</button>
         </div>
 
