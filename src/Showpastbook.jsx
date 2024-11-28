@@ -54,7 +54,7 @@ export const Showpastbook = () =>{
             </div>
             
 
-                 <div className="book-area" onClick={() => handleClick(navigate, 'BookDetail',Book.id)}> 
+                 <div className="book-area" onClick={() => handleClick(navigate, 'Edit',Book.id)}> 
                     <div className="book-text">
                         <div className='bg'>
                             <div className="obi">                         
