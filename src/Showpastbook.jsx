@@ -1,9 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import book from './img/book.png'
-import book_zatudan from './img/zatudan.jpg'
-import obi_zatudan1 from './img/obi-zatudan1.jpg'
-import obi_zatudan2 from './img/obi-zatudan2.jpg'
+import addBtn from './img/obiadd.png'
 import SrideShow from './SrideShow.jsx';
 import { handleClick } from './handclick.jsx';
 import BookData from './BookData.jsx';
@@ -55,13 +52,10 @@ export const Showpastbook = () =>{
             
 
                  <div className="book-area" onClick={() => handleClick(navigate, 'Edit',Book.id)}> 
-                    <div className="book-text">
-                        <div className='bg'>
-                            <div className="obi">                         
-                                <SrideShow images={Book.images} /> 
-                            </div>    
-                        </div> 
-                    </div>
+                 <div className='addBtn' >
+                     <img src={addBtn} className="obiAddImg" /> 
+                    <div className='addBg'> <div className="obi"> 
+                        <SrideShow images={Book.images} /> </div> </div> </div>
                     <div className="image"> 
                         <img src={Book.image} alt={Book.title} />
                     </div> 
