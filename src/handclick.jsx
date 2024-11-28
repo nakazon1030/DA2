@@ -14,6 +14,13 @@ export const handleClick = (navigate, route, id) => {
       case "MyReport":
         navigate('/MyReport');
         break;
+      case "NewBook":
+        const bookbasePath = '/NewBook';
+        const bookfullPath = bookbasePath + '/'+id;
+        // console.log(bookfullPath);
+        //console.log(id);
+        navigate(bookfullPath);
+        break;
       default:
         navigate('/');
     }

@@ -13,7 +13,7 @@ export const ShowAllBooks = () =>{
     const navigate = useNavigate();
     
     const booklist = BookData.map(Book => (
-        <div className="book-area" onClick={() => handleClick(navigate, '#')}>
+        <div className="book-area" onClick={() => handleClick(navigate, 'NewBook',Book.id)}>
             <div className='book-text'>
                     <div className="obi">
                         <SrideShow images={Book.images} />  
