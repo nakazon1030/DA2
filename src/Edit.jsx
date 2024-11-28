@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import html2canvas from 'html2canvas';
 import './Edit.css'; // CSSファイルをリネーム
+import { handleClick } from './handclick';
+import { useNavigate } from 'react-router-dom';
 
 const Edit = () => {
+    const navigate = useNavigate();
     const [elements, setElements] = useState([]);
     const [selectedElement, setSelectedElement] = useState(null);
     const [editingText, setEditingText] = useState('');
@@ -45,8 +48,8 @@ const Edit = () => {
         {
           id,
           type,
-          x: 50,
-          y: 50,
+          x:  type === 'text' ? 30 : 170,
+          y:  30,
           width: 100,
           height: 100,
           text: type === 'text' ? 'テキスト' : '',
@@ -116,9 +119,17 @@ const Edit = () => {
         setElements(elements.filter(el => el.id !== selectedElement.id));
         setSelectedElement(null);
       }};
+
+      
   
     return (
       <>
+        <div className='sp-fixed-menu'>
+          <ul>
+            <li>社内図書館システム(マイページ)</li>
+            <li onClick={() => handleClick(navigate, 'MyReport')}>マイページ</li>
+          </ul> 
+        </div>
         <div className='addArea'>
           <button onClick={() => addElement('text')}>テキストBOX</button>
           <button onClick={() => addElement('rect')}>長方形</button>
