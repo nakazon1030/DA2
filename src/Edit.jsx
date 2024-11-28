@@ -120,14 +120,14 @@ const Edit = () => {
     return (
       <>
         <div className='addArea'>
-          <button onClick={() => addElement('text')}>テキストボックス</button>
+          <button onClick={() => addElement('text')}>テキストBOX</button>
           <button onClick={() => addElement('rect')}>長方形</button>
           <button onClick={() => addElement('circle')}>円</button>
-          <button onClick={() => addElement('triangle')}>三角形</button>
+          {/* <button onClick={() => addElement('triangle')}>三角形</button> */}
         </div>
         <div className='saveAndDeleateArea'>
           <button className='saveBtn'onClick={saveAsHtml}>保存</button>
-          <button onClick={deleteElement}>選択した要素を消去</button>
+          <button className='deleateBtn' onClick={deleteElement}>選択した要素を消去</button>
         </div>
 
         <div
