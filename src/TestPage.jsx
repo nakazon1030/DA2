@@ -20,7 +20,10 @@ const TestPage = () => {
   const [borderColor, setBorderColor] = useState('black');
   const [borderWidth, setBorderWidth] = useState(1);
   const [htmlContent, setHtmlContent] = useState('');
-  const [selectedBookId, setSelectedBookId] = useState(1);
+  const { id } = useParams();
+  const intId = parseInt(id,10);
+  const filteredArray = BookData.filter(item => item.id ===intId);
+  console.log(filteredArray);
 
   const colors = [
     { name: 'Transparent', value: 'transparent' },
