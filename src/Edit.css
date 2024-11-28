@@ -4,7 +4,9 @@
   justify-content: center;
   width: 400px;
   height: 70px;
-  background-color: aliceblue;
+  background-color: rgb(202, 226, 246);
+  border: 1px solid powderblue;
+  border-radius: 10px/10px;
   margin: 10px auto;
   flex-wrap: wrap;
 
@@ -12,15 +14,24 @@
 .addArea button {
   margin: 5px 5px;
 	font-weight: bold;
-  width: 125px;
+  width: 100px;
 	border: 2px solid #27acd9;
 	color: #27acd9;
+  border-radius: 10px/10px;
 }
 .saveBtn {
 	font-weight: bold;
   width: 125px;
 	border: 2px solid rgb(255, 192, 192);
-	color: rgb(255, 192, 192);
+	color: rgb(237, 66, 66);
+  border-radius: 10px/10px;
+  margin-right: 10px;
+}
+
+.deleateBtn{
+  border-radius: 10px/10px;
+  width: 140px;
+  margin-left: 10px;
 }
 
 .design-area {
@@ -36,7 +47,7 @@
   width:  400px;
   height: 130px;
   border: 1px solid powderblue;
-  background-color: aliceblue;
+  background-color: rgb(202, 226, 246);
   margin: 10px auto;
   border-radius: 10px/10px;
 }
@@ -50,7 +61,7 @@
     width:  400px;
     height: 130px;
     border: 1px solid powderblue;
-    background-color: aliceblue;
+    background-color: rgb(202, 226, 246);
     margin: 10px auto;
     border-radius: 10px/10px;
 }
@@ -65,7 +76,7 @@
 .saveAndDeleateArea{
   width: 400px;
   height: 40px;
-  background-color: aliceblue;
+  background-color: rgb(202, 226, 246);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -84,6 +95,8 @@
   margin-right: 10px;
   font-weight: bold;
   color:#27acd9;
+  width: 80px;
+  text-align: left;
 }
 
 .editTitle{
