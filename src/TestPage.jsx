@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import html2canvas from 'html2canvas';
 import './TestPage.css'; // CSSファイルをリネーム
-import { saveAsHtml } from './SaveAsHtml.jsx'; // インポート
 import { handleClick } from './handclick.jsx';
 import { saveAsPng } from './SaveAsPng.jsx';
 
@@ -134,7 +133,6 @@ const TestPage = () => {
       <button onClick={() => addElement('circle')}>円を追加</button>
       <button onClick={() => addElement('triangle')}>三角形を追加</button>
       <button onClick={() => saveAsPng('designArea', selectedBookId)}>PNGとして保存</button>
-      <button onClick={() => saveAsHtml('designArea', selectedBookId)}>HTMLとして保存</button>
       {selectedElement && (
         <div style={{ marginTop: '10px' }}>
           {selectedElement.type === 'text' && (
