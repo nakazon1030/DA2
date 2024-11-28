@@ -3,9 +3,8 @@ import { addHtmlContentToBook, BookData } from './BookData.jsx';
 import { handleClick } from './handclick';
 import { useNavigate } from 'react-router-dom';
 
-export const saveAsPng = (elementId, bookId) => {
+export const saveAsPng = (elementId, bookId, navigate) => {
 
-  // const navigate = useNavigate();
 
   const element = document.getElementById(elementId);
   html2canvas(element).then(canvas => {
@@ -18,7 +17,7 @@ export const saveAsPng = (elementId, bookId) => {
     if (book) {
       book.images.push(imgData);
       localStorage.setItem('bookData', JSON.stringify(BookData)); // ローカルストレージに保存
-      // handleClick(navigate, 'MyReport');
+      handleClick(navigate, 'MyReport');
     }
   });
 };

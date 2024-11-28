@@ -132,7 +132,7 @@ const Edit = () => {
           <button onClick={() => addElement('circle')}>円</button>
         </div>
         <div className='saveAndDeleateArea'>
-          <button className='saveBtn'onClick={() => (saveAsPng('designArea', filteredArray[0].id))}>保存</button>
+          <button className='saveBtn'onClick={() => (saveAsPng('designArea', filteredArray[0].id, navigate))}>保存</button>
           <button className='deleateBtn' onClick={deleteElement}>選択した要素を消去</button>
         </div>
 
