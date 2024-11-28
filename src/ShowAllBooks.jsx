@@ -21,7 +21,10 @@ export const ShowAllBooks = () =>{
             </div>
             <div className="image">
                 <img src={Book.image}/>
+
             </div>
+            <div dangerouslySetInnerHTML={{ __html: book.htmlContent }} />
+            {console.log("Book:" + book.htmlContent)}
 
         </div>
         

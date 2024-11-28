@@ -4,3 +4,7 @@
     border: 1px solid #ddd;
     position: relative;
   }
+
+  .mainArea{
+    margin-top: 100px;
+  }
