@@ -1,4 +1,5 @@
 .new-book-1{
+    margin-top: 50px;
     width: 432px;
     height: 300px;
     display: flex;
@@ -30,6 +31,7 @@
     justify-content: center;
     width: 432px;
     height: 75px;
+    padding: 10px;
     background-color:ghostwhite;
 }
 
@@ -61,7 +63,7 @@
     font-weight: bold;
     border: 5px solid powderblue;
     background-color: aliceblue;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 .new-read{
@@ -71,7 +73,7 @@
     font-weight: bold;
     border: 5px solid powderblue;
     background-color: aliceblue;
-    border-radius: 5%;
+    border-radius: 10px;
     margin: 20px;
 }
 
@@ -82,7 +84,7 @@
     font-weight: bold;
     border: 5px solid powderblue;
     background-color: aliceblue;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 .book-youshi{

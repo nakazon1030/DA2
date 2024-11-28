@@ -21,7 +21,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/TestPage' element={<TestPage />} />
         <Route path='/Edit' element={<Edit />} />
         <Route path='/DisplayPage' element={<DisplayPage/>} />
-        <Route path='/NewBook' element={<NewBook />} />
+        <Route path="/NewBook/:id" element={<NewBook />} />
       </Routes>
     </BrowserRouter>
 

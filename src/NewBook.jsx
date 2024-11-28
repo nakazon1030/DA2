@@ -1,33 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import zatudan from './img/zatudan.jpg';
 import './NewBook.css'
+import { useParams } from 'react-router-dom';
+import BookData from './BookData.jsx';
+import { handleClick } from './handclick.jsx';
+
 
 function NewBook() {
+    const [Flag,setFlag] = useState(0);
     const navigate = useNavigate();
+    const { id } = useParams();
+    const intId = parseInt(id,10);
+    const filteredArray = BookData.filter(item => item.id ===intId);
+    console.log(filteredArray);
+
 
     return (
         <>
+         <div className='sp-fixed-menu'>
+        <ul>
+          <li>本の詳細</li>
+          <li onClick={() => handleClick(navigate, 'Top')}>トップ</li>
+        </ul> 
+      </div>
         <div className='new-book-1'>
             <div className='new-book-i'>
-                <img src={zatudan} />
+                <img src={filteredArray[0].image} />
             </div>
             <div className='new-book-d'>
-                <p className='new-title'>超一流の雑談力</p>
-                <p className='new-auth'>安田 正</p>
-                <p className='pub-date'>2015年5月20日</p>
-                <p className='pub-com'>文響社</p>
-                <button className='new-regi'>登録</button>
+                <p className='new-title'>{filteredArray[0].title}</p>
+                <p className='new-auth'>{filteredArray[0].auth}</p>
+                <p className='pub-date'>{filteredArray[0].year}</p>
+                <p className='pub-com'>{filteredArray[0].publish}</p>
+                {/* <button className='new-regi'>登録</button> */}
+                {Flag === 0 && <button className='new-regi'onClick={() => setFlag(1)}>登録</button>}
+                {Flag === 1 && <button className='new-regi'onClick={() => setFlag(0)}>登録解除</button>}   
             </div>
         </div>
+        {Flag === 0 &&
+       <div className='new-book-2'>
+       </div>
+      }
+      {Flag === 1 &&
         <div className='new-book-2'>
             <button className='new-read'>読む</button>
             <button className='new-finish'>読み終わり</button>
-        </div>
+       </div>
+      }
+       
         <div className='new-book-3'>
             <p className='book-youshi'>要旨</p>
-            <p>あたりさわりのない無意味な雑談ではなく、「意味のある雑談をすれば、仕事や人間関係が変わる」。そんなメッセージのもと、雑談力を高める方法を具体的、実践的に解説したのが本書です。
-たとえば、「声は、ドレミファソラシドの『ファ』か『ソ』」「『なるほどですね』『そうですね』は話を聞いていない人の反応」「『なぜですか?』は愚問」など、</p>
+            <p>{filteredArray[0].youshi}</p>
         </div>
         </>
 
