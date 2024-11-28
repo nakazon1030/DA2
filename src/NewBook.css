@@ -35,6 +35,11 @@
     background-color:ghostwhite;
 }
 
+.new-book-3{
+    width: 432px;
+    text-align: left;
+}
+
 .new-title{
     font-size: 25px;
     margin: 10px;
@@ -74,7 +79,7 @@
     border: 5px solid powderblue;
     background-color: aliceblue;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .new-finish{
@@ -85,6 +90,7 @@
     border: 5px solid powderblue;
     background-color: aliceblue;
     border-radius: 10px;
+    margin: 10px;
 }
 
 .book-youshi{

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
-import html2canvas from 'html2canvas';
 import './Edit.css'; // CSSファイルをリネーム
 import { handleClick } from './handclick';
 import { useNavigate } from 'react-router-dom';
+import { saveAsPng } from './SaveAsPng';
+import { useParams } from 'react-router-dom';
+import BookData from './BookData.jsx';
 
 const Edit = () => {
     const navigate = useNavigate();
@@ -15,6 +17,11 @@ const Edit = () => {
     const [fontSize, setFontSize] = useState(16);
     const [borderColor, setBorderColor] = useState('black');
     const [borderWidth, setBorderWidth] = useState(1);
+    const { id } = useParams();
+    const intId = parseInt(id,10);
+    const filteredArray = BookData.filter(item => item.id ===intId);
+    console.log(filteredArray);
+
   
     const colors = [
       { name: '無色', value: 'transparent' },
@@ -48,6 +55,7 @@ const Edit = () => {
         {
           id,
           type,
+
           x:  type === 'text' ? 30 : 170,
           y:  30,
           width: 100,
@@ -134,10 +142,9 @@ const Edit = () => {
           <button onClick={() => addElement('text')}>テキストBOX</button>
           <button onClick={() => addElement('rect')}>長方形</button>
           <button onClick={() => addElement('circle')}>円</button>
-          {/* <button onClick={() => addElement('triangle')}>三角形</button> */}
         </div>
         <div className='saveAndDeleateArea'>
-          <button className='saveBtn'onClick={saveAsHtml}>保存</button>
+          <button className='saveBtn'onClick={saveAsPng('designArea', filteredArray[0].id)}>保存</button>
           <button className='deleateBtn' onClick={deleteElement}>選択した要素を消去</button>
         </div>
 

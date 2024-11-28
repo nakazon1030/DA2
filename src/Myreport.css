@@ -133,19 +133,41 @@
     height: 100%;
 }
 
-.bg {
-    background: url(./img/obiadd.png);
-    background-size: cover;
+.addBtn {
     position: relative;
-    height: 100%;
+    display: inline-block;
+    background-color: white;
 }
 
-.bg::before {
-    content: '';
+.addBg {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background-color: rgba(250, 250, 250, 0.588);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* 最前面に表示 */
+    background-color: white;
+    
+}
+
+.obiAddImg {
+    position: absolute;
+    top: 50%;
+    left: 170px;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* addBgの上に表示 */
+    background-color: white;
+    width: 315px;
+    height: 141px;
+    border-radius: 20px;
+    opacity: 0.5;
+    
+}
+
+.obi {
+    position: relative;
+    z-index: 1; /* addBgとobiAddImgの下に表示 */
 }
