@@ -38,6 +38,7 @@ const Edit = () => {
     ];
   
     const textColors = [
+      { name: '無色', value: 'transparent' },
       { name: '黒', value: 'black' },
       { name: '赤', value: 'red' },
       { name: '緑', value: 'green' },
@@ -68,19 +69,6 @@ const Edit = () => {
           borderWidth: 1,
         },
       ]);
-    };
-
-    const saveAsHtml = () => {
-      const element = document.getElementById('designArea');
-      const htmlContent = element.outerHTML;
-      setHtmlContent(htmlContent); 
-      console.log(htmlContent);
-      // const blob = new Blob([htmlContent], { type: 'text/html' });
-      // const link = document.createElement('a');
-      // link.href = URL.createObjectURL(blob);
-      // link.download = 'design.html';
-      // link.click();
-      //上記はダウンロード機能を使いたい場合有効化してください。
     };
   
     const handleElementClick = (element) => {
@@ -144,7 +132,7 @@ const Edit = () => {
           <button onClick={() => addElement('circle')}>円</button>
         </div>
         <div className='saveAndDeleateArea'>
-          <button className='saveBtn'onClick={saveAsPng('designArea', filteredArray[0].id)}>保存</button>
+          <button className='saveBtn'onClick={() => (saveAsPng('designArea', filteredArray[0].id))}>保存</button>
           <button className='deleateBtn' onClick={deleteElement}>選択した要素を消去</button>
         </div>
 
