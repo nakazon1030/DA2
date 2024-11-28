@@ -18,7 +18,7 @@ import pyramid8 from "./img/pyramid (8).png";
 import pyramid9 from "./img/pyramid (9).png";
 import pyramid10 from "./img/pyramid (10).png";
 import pyramid11 from "./img/pyramid (11).png";
-import star from './img/star.png'
+import { resetBookData } from './resetBookData.jsx';
 function Myreport() {
   const navigate = useNavigate();
 
@@ -146,6 +146,7 @@ function Myreport() {
               value={timeSpent}
               onChange={(f) => setTimeSpent(f.target.value)}
             />
+            <button onClick={resetBookData}>帯データをデフォルトに戻す</button>
           </>
         )}
       </div>

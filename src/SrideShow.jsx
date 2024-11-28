@@ -25,7 +25,7 @@ export default function SrideShow({images}) {
     // 4秒おきに画像を切り替える（現在のindex+1を画像の数で割ることでループする）
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000);
+    }, 4000);
 
     // ページを離れるときにインターバル処理を終了する（これがないとずっと裏でインターバルが動いてしまう。）
     return () => clearInterval(timer);
