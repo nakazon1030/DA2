@@ -1,9 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Rnd } from 'react-rnd';
 import html2canvas from 'html2canvas';
 import './TestPage.css'; // CSSファイルをリネーム
+import { saveAsHtml } from './SaveAsHtml.jsx'; // インポート
+import { handleClick } from './handclick.jsx';
+import { saveAsPng } from './SaveAsPng.jsx';
 
 const TestPage = () => {
+
+  const navigate = useNavigate();
+
   const [elements, setElements] = useState([]);
   const [selectedElement, setSelectedElement] = useState(null);
   const [editingText, setEditingText] = useState('');
@@ -13,6 +20,7 @@ const TestPage = () => {
   const [borderColor, setBorderColor] = useState('black');
   const [borderWidth, setBorderWidth] = useState(1);
   const [htmlContent, setHtmlContent] = useState('');
+  const [selectedBookId, setSelectedBookId] = useState(1);
 
   const colors = [
     { name: 'Transparent', value: 'transparent' },
@@ -69,20 +77,7 @@ const TestPage = () => {
       link.click();
     });
   };
-
-  const saveAsHtml = () => {
-    const element = document.getElementById('designArea');
-    const htmlContent = element.outerHTML;
-    setHtmlContent(htmlContent); 
-    console.log(htmlContent);
-    // const blob = new Blob([htmlContent], { type: 'text/html' });
-    // const link = document.createElement('a');
-    // link.href = URL.createObjectURL(blob);
-    // link.download = 'design.html';
-    // link.click();
-    //上記はダウンロード機能を使いたい場合有効化してください。
-  };
-
+  const element = document.getElementById('designArea');
 
   const handleElementClick = (element) => {
     setSelectedElement(element);
@@ -127,12 +122,19 @@ const TestPage = () => {
 
   return (
     <div>
+      <div className='sp-fixed-menu'>
+        <ul>
+          <li onClick={() => handleClick(navigate, 'Top')}>社内図書館システム(マイページ)</li>
+          <li onClick={() => handleClick(navigate, 'Top')}>戻る</li>
+        </ul> 
+      </div>
+      <div className='mainArea'>
       <button onClick={() => addElement('text')}>テキストボックスを追加</button>
       <button onClick={() => addElement('rect')}>長方形を追加</button>
       <button onClick={() => addElement('circle')}>円を追加</button>
       <button onClick={() => addElement('triangle')}>三角形を追加</button>
-      <button onClick={saveAsImage}>画像として保存</button>
-      <button onClick={saveAsHtml}>HTMLとして保存</button>
+      <button onClick={() => saveAsPng('designArea', selectedBookId)}>PNGとして保存</button>
+      <button onClick={() => saveAsHtml('designArea', selectedBookId)}>HTMLとして保存</button>
       {selectedElement && (
         <div style={{ marginTop: '10px' }}>
           {selectedElement.type === 'text' && (
@@ -253,6 +255,7 @@ const TestPage = () => {
             </div>
           </Rnd>
         ))}
+      </div>
       </div>
     </div>
   );

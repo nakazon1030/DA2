@@ -8,6 +8,7 @@ import Myreport from './Myreport.jsx'
 import TestPage from './TestPage.jsx'
 import Edit from './Edit.jsx'
 import BookDetail from './BookDetail.jsx'
+import DisplayPage from './DisplayPage.jsx'
 import NewBook from './NewBook.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/Myreport' element={<Myreport />} />
         <Route path='/TestPage' element={<TestPage />} />
         <Route path='/Edit' element={<Edit />} />
+        <Route path='/DisplayPage' element={<DisplayPage/>} />
         <Route path='/NewBook' element={<NewBook />} />
       </Routes>
     </BrowserRouter>
